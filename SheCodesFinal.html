@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Karaoke is King</title>
+    <style>
+      .karaoke-project {
+        background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%);
+        margin: 30px, auto;
+        padding: 20px;
+      }
+      .details {
+        border: 2px solid #fff;
+        margin: 0 auto;
+        text-align: center;
+        border-radius: 50px;
+        padding: 10px;
+        width: 500px;
+      }
+      h1 {
+        text-align: center;
+        background-color: rgba(39, 241, 66, 0.53);
+        width: 300px;
+        margin: 0 auto;
+        border-radius: 10px;
+        padding: 20px;
+        border: 1px, solid, #fff;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      p {
+        text-align: center;
+        width: 300px;
+        margin: 0 auto;
+        font-size: 18px;
+      }
+      a {
+        display: block;
+        margin: 0 auto;
+        width: 400px;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        width: 400px;
+        padding: 20px;
+      }
+      button {
+        display: block;
+        margin: 0 auto 20px auto;
+        padding: 30px;
+        background: transparent;
+        border: 5px solid #fff;
+        font-size: 20px;
+        color: black;
+        font-weight: bolder;
+        border-radius: 25px;
+        transition: all 200ms ease-in-out;
+        box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.2);
+      }
+      button:hover {
+        color: white;
+        cursor: pointer;
+        background: rgba(39, 241, 66, 0.53);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="karaoke-project">
+      <h1>Karaoke is King</h1>
+      <br />
+      <h2><em>A classic night out that is always a good time.</em></h2>
+      <p>
+        The Japanese word <strong>"karaoke"</strong> translates to
+        <strong>"empty orchestra"</strong>.
+      </p>
+      <br />
+      <p>
+        <span style="font-size: 16px">
+          Karaoke originated in Kobe, Japan in the 1970s, and since then
+          millions around the world have filled empty orchestras with their
+          voices (good, bad, & ugly).</span
+        >
+      </p>
+      <a
+        href="https://www.rollingstone.com/music/music-features/karaoke-inventor-tribute-rob-sheffield-1234988898/"
+        target="_blank"
+        ><img
+          src="https://mcdn.podbean.com/mf/web/fnmefm/karaoke_cut.jpg"
+          alt="creator of karaoke"
+      /></a>
+      <br />
+      <div class="details">
+        <em>
+          <h3>Get down in K-town for LG's 5th Annual Karaoke Banger</h3>
+          <p>Friday, April 5th</p></em
+        >
+      </div>
+      <br />
+      <button><em>I'M IN!</em></button>
+    </div>
+    <script>
+      function updateHeading(newHeading) {
+        let heading = document.querySelector("h1");
+        heading.innerHTML = newHeading;
+      }
+
+      function RSVP() {
+        let name = prompt("What's your name?").toUpperCase();
+        let yesno = prompt(
+          "Will you karaoke with us at Lauren's 26th birthday party? Answer yes or no."
+        );
+        if (yesno == "yes" && "Yes") {
+          updateHeading(
+            `😊<br/>Let's go, ${name}!! The karaoke countdown begins...`
+          );
+        } else {
+          updateHeading(`😔<br/>Bummer! We'll miss you, ${name}.`);
+        }
+      }
+      let participatebutton = document.querySelector("button");
+      participatebutton.addEventListener("click", RSVP);
+    </script>
+  </body>
+</html>
